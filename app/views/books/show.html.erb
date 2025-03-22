@@ -1,6 +1,16 @@
-<span>Title:<%= @book.title %></span>
-<span>Body:<%= @book.body %></span>
+<div class="row">
+  <div class="pt-3 col-3">
+    <p>
+    <strong>Title:</strong><%= @book.title %>
+    </p>
+    <p>
+      <strong>Body:</strong><%= @book.body %>
+    </p>
+    <%= link_to "Edit", edit_book_path(@book.id), class: "link-dark" %>
+    |
+    <%= link_to "Back", books_path, class: "link-dark" %>
+  </div>
+  <div class="col-9"></div>
+</div>
 
-<%= link_to "Edit", edit_book_path(@book.id) %>
-<%= link_to "Back", books_path %>
 
